@@ -2,55 +2,67 @@
 
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="./index.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Document</title>
-	<script src="./index.js" defer></script>
-	<link rel="stylesheet" href="style.css" />
-</head>
+	<body>
+		<form action="form_success.html" method="GET">
+			<h1>Sign up here!</h1>
+			<p>Please complete the form to sign up to our website</p>
 
-<body>
-	<form action="form_success.html" method="GET">
-		<h1>Sign up here!</h1>
-		<p>Please complete the form to sign up to our website</p>
+			<label for="username" id="username">
+				Username:
+				<input
+					type="text"
+					name="username"
+					id="usernameInput"
+					placeholder="Enter username"
+				/>
+			</label>
+			<br />
+			<br />
 
-		<label for="username">
-			Username:
-			<input type="text" name="username" id="usernameInput" placeholder="Enter username" />
-			<p>Invalid username, must contain at least 1 special character and 1 number</p>
-		</label>
-		<br />
-		<br />
+			<label for="firstName">
+				First name:
+				<input
+					type="text"
+					name="firstName"
+					class="inputField"
+					placeholder="Enter first name"
+				/>
+			</label>
+			<br />
+			<br />
 
-		<label for="firstName">
-			First name:
-			<input type="text" name="firstName" class="inputField" placeholder="Enter first name" />
-		</label>
-		<br />
-		<br />
+			<label for="surname">
+				Surname:
+				<input
+					type="text"
+					name="surName"
+					class="inputField"
+					placeholder="Enter surname"
+				/>
+			</label>
+			<br />
+			<br />
 
-		<label for="surname">
-			Surname:
-			<input type="text" name="surName" class="inputField" placeholder="Enter surname" />
-		</label>
-		<br />
-		<br />
+			<label for="DofB">
+				Date of Birth:
+				<input type="date" name="DofB" class="inputField" />
+			</label>
+			<br />
+			<br />
 
-		<label for="DofB">
-			Date of Birth:
-			<input type="date" name="DofB" class="inputField" />
-		</label>
-		<br />
-		<br />
-
-		<p>
-			By creating an account you agree to our
-			<a href="/TermsandPrivacy.html">Terms & Privacy</a>.
-		</p>
-		<button type="submit">Submit</button>
-	</form>
-</body>
-
+			<p>
+				By creating an account you agree to our
+				<a href="/TermsandPrivacy.html">Terms & Privacy</a>.
+			</p>
+			<button type="submit">Submit</button>
+		</form>
+	</body>
 </html>
