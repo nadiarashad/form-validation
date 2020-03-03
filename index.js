@@ -34,7 +34,7 @@ firstName.addEventListener("keyup", (event) => {
 		firstName.classList.add("valid");
 		firstName.classList.remove("invalid");
 
-		if (invalidMsg.hidden === false) {
+		if (invalidMsg.hidden === false) { //found with console.dir(invalidMsg)
 			invalidMsg.hidden = true
 		}
 
@@ -57,4 +57,38 @@ firstName.addEventListener("keyup", (event) => {
 	}
 })
 
-console.log(firstName)
+
+const surname = document.querySelector("#surnameInput")
+
+console.log(surname)
+const invalidMsg2 = document.createElement("p")
+
+
+surname.addEventListener("keyup", (event) => {
+	if (surname.value.match(/^[A-Za-z\s'-]+$/g)) {
+		surname.classList.add("valid");
+		surname.classList.remove("invalid");
+
+		if (invalidMsg2.hidden === false) { //found with console.dir(invalidMsg)
+			invalidMsg2.hidden = true
+		}
+
+	} else {
+		surname.classList.add("invalid");
+		surname.classList.remove("valid");
+
+		invalidMsg2.innerText =
+			"Invalid surname can only contain letters, spaces, hyphens and apostrophes";
+
+		const surnameLabel = document.querySelector("#surname");
+
+		if (surnameLabel.children.length === 1) {
+			surnameLabel.appendChild(invalidMsg2);
+		}
+
+		if (invalidMsg2.hidden === true) {
+			invalidMsg2.hidden = false
+		}
+	}
+})
+
