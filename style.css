@@ -7,3 +7,17 @@
 .invalid {
 	background-color: red;
 }
+
+body {
+	background-color: lightblue;
+	font-family: Cambria;
+	font-style: normal;
+	font-weight: bold;
+	color: navy;
+}
+
+input {
+	background-color: lightcyan;
+	color: navy;
+	
+}
